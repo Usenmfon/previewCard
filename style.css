@@ -73,7 +73,7 @@ main {
 }
 
 #sedan-button {
-    color: hsl(31, 77%, 52%);
+    color: hsl(31, 14%, 42%);
 }
 
 #suv-button {
@@ -84,7 +84,7 @@ main {
     color: hsl(179, 100%, 13%);
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (min-width: 1440px) {
     main {
         flex-direction: row;
         justify-content: center;
