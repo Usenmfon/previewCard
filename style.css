@@ -1,0 +1,135 @@
+/* @font-face {
+    font-family: lexend;
+    src: url(https://fonts.google.com/specimen/Lexend+Deca);
+} */
+
+:root {
+    --borderRadius: 10px;
+    --color: hsla(0, 0%, 100%, 0.75);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(0, 0%, 95%);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px auto;
+}
+
+#sedans,
+#suv,
+#luxury {
+    height: 20em;
+    width: 15em;
+}
+
+#sedans {
+    background-color: hsl(31, 77%, 52%);
+    border-top-right-radius: var(--borderRadius);
+    border-top-left-radius: var(--borderRadius);
+}
+
+#suv {
+    background-color: hsl(184, 100%, 22%);
+}
+
+#luxury {
+    background-color: hsl(179, 100%, 13%);
+    border-bottom-right-radius: var(--borderRadius);
+    border-bottom-left-radius: var(--borderRadius);
+}
+
+.contents {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 2em;
+    left: 1em;
+    width: 14em;
+}
+
+.contents>h3 {
+    color: var(--color);
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+.contents>p {
+    font-family: 'Lexend Deca', sans-serif;
+    text-align: left;
+    width: fit-content;
+    color: var(--color);
+}
+
+.contents>a>button {
+    font-family: 'Lexend Deca', sans-serif;
+    border-radius: 15px;
+    padding: 10px 12px;
+    border: none;
+}
+
+#sedan-button {
+    color: hsl(31, 77%, 52%);
+}
+
+#suv-button {
+    color: hsl(184, 100%, 22%);
+}
+
+#luxury-button {
+    color: hsl(179, 100%, 13%);
+}
+
+@media screen and (min-width: 1440px) {
+    main {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    #sedans,
+    #suv,
+    #luxury {
+        height: 40em;
+        width: 30em;
+    }
+    #sedans {
+        border-radius: 0;
+        border-bottom-left-radius: var(--borderRadius);
+        border-top-left-radius: var(--borderRadius);
+    }
+    #luxury {
+        border-radius: 0;
+        border-top-right-radius: var(--borderRadius);
+        border-bottom-right-radius: var(--borderRadius);
+    }
+    .contents {
+        top: 4em;
+        left: 5em;
+        width: 20em;
+    }
+    h3 {
+        font-weight: 900;
+    }
+    h3,
+    p {
+        font-size: 25px;
+        text-align: justify;
+    }
+    .contents>a>button {
+        position: relative;
+        top: 5em;
+        right: auto;
+        left: auto;
+        width: 10em;
+        height: 3.5em;
+        font-size: 18px;
+        border-radius: 5.5em;
+    }
+    .attribution {
+        font-size: 17px;
+    }
+}
